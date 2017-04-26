@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataSpeedTest.Data.EF;
- 
+
 
 namespace DataSpeedTest
 {
@@ -13,7 +13,6 @@ namespace DataSpeedTest
         static void Main(string[] args)
         {
             var records = DataHelper.LoadDataToDatatable();
- 
 
         }
     }
