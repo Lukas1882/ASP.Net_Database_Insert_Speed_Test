@@ -12,7 +12,7 @@ namespace DataSpeedTest
     {
         static void Main(string[] args)
         {
-            var records = DataHelper.LoadDataToList();
+            var records = DataHelper.LoadDataToDatatable();
  
 
         }

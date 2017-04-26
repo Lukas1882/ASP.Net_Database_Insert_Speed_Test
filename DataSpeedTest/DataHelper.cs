@@ -4,22 +4,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataSpeedTest.Data.EF;
+using System.Data;
+using System.Data.SqlClient;
+using System.Reflection;
+using System.ComponentModel;
 
 namespace DataSpeedTest
 {
-    class DataHelper
+    public static class DataHelper
     {
         public static List<SourceTable1> LoadDataToList()
         {
             using (var context = new TestEntities())
             {
-                // Query for all blogs with names starting with B 
                 var records = (from r in context.SourceTable1 select r);// context.SourceTable1.Select(r =>r.col1 != null);   // from b in context.TargetTable1 select b;
-                var dd = records.AsEnumerable<SourceTable1>().ToList();
-             
+                return records.AsEnumerable<SourceTable1>().ToList();
             }
-
-            return null;
         }
+
+        public static DataTable LoadDataToDatatable()
+        {
+            var list = LoadDataToList();
+            return ToDataTable(list);
+        }
+
+
+        public static DataTable ToDataTable<T>(this IList<T> data)
+        {
+            PropertyDescriptorCollection properties =
+                TypeDescriptor.GetProperties(typeof(T));
+            DataTable table = new DataTable();
+            foreach (PropertyDescriptor prop in properties)
+                table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType);
+            foreach (T item in data)
+            {
+                DataRow row = table.NewRow();
+                foreach (PropertyDescriptor prop in properties)
+                    row[prop.Name] = prop.GetValue(item) ?? DBNull.Value;
+                table.Rows.Add(row);
+            }
+            return table;
+        }
+
+
     }
 }
