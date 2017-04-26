@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SourceTable1">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="col1" Type="nchar" MaxLength="100" />
+          <Property Name="col2" Type="nchar" MaxLength="100" />
+          <Property Name="col3" Type="datetime" Nullable="false" />
+          <Property Name="col4" Type="float" />
+          <Property Name="col5" Type="float" />
+          <Property Name="col6" Type="float" />
+          <Property Name="col7" Type="float" Nullable="false" />
+          <Property Name="col8" Type="float" />
+          <Property Name="col9" Type="varchar" MaxLength="500" />
+          <Property Name="col10" Type="varchar" MaxLength="500" />
+          <Property Name="col11" Type="varchar" MaxLength="500" />
+          <Property Name="col12" Type="bigint" />
+          <Property Name="col13" Type="bigint" />
+          <Property Name="col14" Type="bit" />
+          <Property Name="col15" Type="bit" />
+          <Property Name="col16" Type="bit" />
+        </EntityType>
+        <EntityType Name="TargetTable1">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="col1" Type="nchar" MaxLength="100" />
+          <Property Name="col2" Type="nchar" MaxLength="100" />
+          <Property Name="col3" Type="datetime" Nullable="false" />
+          <Property Name="col4" Type="float" />
+          <Property Name="col5" Type="float" />
+          <Property Name="col6" Type="float" />
+          <Property Name="col7" Type="float" Nullable="false" />
+          <Property Name="col8" Type="float" />
+          <Property Name="col9" Type="varchar" MaxLength="500" />
+          <Property Name="col10" Type="varchar" MaxLength="500" />
+          <Property Name="col11" Type="varchar" MaxLength="500" />
+          <Property Name="col12" Type="bigint" />
+          <Property Name="col13" Type="bigint" />
+          <Property Name="col14" Type="bit" />
+          <Property Name="col15" Type="bit" />
+          <Property Name="col16" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="TestModelStoreContainer">
+          <EntitySet Name="SourceTable1" EntityType="Self.SourceTable1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TargetTable1" EntityType="Self.TargetTable1" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SourceTable1">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Guid" Nullable="false" />
+          <Property Name="col1" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="col2" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="col3" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="col4" Type="Double" />
+          <Property Name="col5" Type="Double" />
+          <Property Name="col6" Type="Double" />
+          <Property Name="col7" Type="Double" Nullable="false" />
+          <Property Name="col8" Type="Double" />
+          <Property Name="col9" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="col10" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="col11" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="col12" Type="Int64" />
+          <Property Name="col13" Type="Int64" />
+          <Property Name="col14" Type="Boolean" />
+          <Property Name="col15" Type="Boolean" />
+          <Property Name="col16" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="TargetTable1">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Guid" Nullable="false" />
+          <Property Name="col1" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="col2" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="col3" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="col4" Type="Double" />
+          <Property Name="col5" Type="Double" />
+          <Property Name="col6" Type="Double" />
+          <Property Name="col7" Type="Double" Nullable="false" />
+          <Property Name="col8" Type="Double" />
+          <Property Name="col9" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="col10" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="col11" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="col12" Type="Int64" />
+          <Property Name="col13" Type="Int64" />
+          <Property Name="col14" Type="Boolean" />
+          <Property Name="col15" Type="Boolean" />
+          <Property Name="col16" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="TestEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SourceTable1" EntityType="Self.SourceTable1" />
+          <EntitySet Name="TargetTable1" EntityType="Self.TargetTable1" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TestModelStoreContainer" CdmEntityContainer="TestEntities">
+          <EntitySetMapping Name="SourceTable1">
+            <EntityTypeMapping TypeName="TestModel.SourceTable1">
+              <MappingFragment StoreEntitySet="SourceTable1">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="col1" ColumnName="col1" />
+                <ScalarProperty Name="col2" ColumnName="col2" />
+                <ScalarProperty Name="col3" ColumnName="col3" />
+                <ScalarProperty Name="col4" ColumnName="col4" />
+                <ScalarProperty Name="col5" ColumnName="col5" />
+                <ScalarProperty Name="col6" ColumnName="col6" />
+                <ScalarProperty Name="col7" ColumnName="col7" />
+                <ScalarProperty Name="col8" ColumnName="col8" />
+                <ScalarProperty Name="col9" ColumnName="col9" />
+                <ScalarProperty Name="col10" ColumnName="col10" />
+                <ScalarProperty Name="col11" ColumnName="col11" />
+                <ScalarProperty Name="col12" ColumnName="col12" />
+                <ScalarProperty Name="col13" ColumnName="col13" />
+                <ScalarProperty Name="col14" ColumnName="col14" />
+                <ScalarProperty Name="col15" ColumnName="col15" />
+                <ScalarProperty Name="col16" ColumnName="col16" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TargetTable1">
+            <EntityTypeMapping TypeName="TestModel.TargetTable1">
+              <MappingFragment StoreEntitySet="TargetTable1">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="col1" ColumnName="col1" />
+                <ScalarProperty Name="col2" ColumnName="col2" />
+                <ScalarProperty Name="col3" ColumnName="col3" />
+                <ScalarProperty Name="col4" ColumnName="col4" />
+                <ScalarProperty Name="col5" ColumnName="col5" />
+                <ScalarProperty Name="col6" ColumnName="col6" />
+                <ScalarProperty Name="col7" ColumnName="col7" />
+                <ScalarProperty Name="col8" ColumnName="col8" />
+                <ScalarProperty Name="col9" ColumnName="col9" />
+                <ScalarProperty Name="col10" ColumnName="col10" />
+                <ScalarProperty Name="col11" ColumnName="col11" />
+                <ScalarProperty Name="col12" ColumnName="col12" />
+                <ScalarProperty Name="col13" ColumnName="col13" />
+                <ScalarProperty Name="col14" ColumnName="col14" />
+                <ScalarProperty Name="col15" ColumnName="col15" />
+                <ScalarProperty Name="col16" ColumnName="col16" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

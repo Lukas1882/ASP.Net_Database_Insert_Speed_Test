@@ -1,0 +1,10 @@
+c:\users\luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\bin\Debug\DataSpeedTest.exe.config
+c:\users\luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\bin\Debug\DataSpeedTest.exe
+c:\users\luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\bin\Debug\DataSpeedTest.pdb
+c:\users\luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\obj\Debug\DataSpeedTest.csprojResolveAssemblyReference.cache
+c:\users\luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\obj\Debug\DataSpeedTest.exe
+c:\users\luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\obj\Debug\DataSpeedTest.pdb
+c:\users\luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\bin\Debug\EntityFramework.dll
+c:\users\luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\bin\Debug\EntityFramework.xml
+c:\users\luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\bin\Debug\EntityFramework.SqlServer.xml

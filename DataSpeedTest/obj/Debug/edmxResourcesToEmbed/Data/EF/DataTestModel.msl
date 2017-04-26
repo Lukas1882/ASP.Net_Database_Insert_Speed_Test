@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TestModelStoreContainer" CdmEntityContainer="TestEntities">
+    <EntitySetMapping Name="SourceTable1">
+      <EntityTypeMapping TypeName="TestModel.SourceTable1">
+        <MappingFragment StoreEntitySet="SourceTable1">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="col1" ColumnName="col1" />
+          <ScalarProperty Name="col2" ColumnName="col2" />
+          <ScalarProperty Name="col3" ColumnName="col3" />
+          <ScalarProperty Name="col4" ColumnName="col4" />
+          <ScalarProperty Name="col5" ColumnName="col5" />
+          <ScalarProperty Name="col6" ColumnName="col6" />
+          <ScalarProperty Name="col7" ColumnName="col7" />
+          <ScalarProperty Name="col8" ColumnName="col8" />
+          <ScalarProperty Name="col9" ColumnName="col9" />
+          <ScalarProperty Name="col10" ColumnName="col10" />
+          <ScalarProperty Name="col11" ColumnName="col11" />
+          <ScalarProperty Name="col12" ColumnName="col12" />
+          <ScalarProperty Name="col13" ColumnName="col13" />
+          <ScalarProperty Name="col14" ColumnName="col14" />
+          <ScalarProperty Name="col15" ColumnName="col15" />
+          <ScalarProperty Name="col16" ColumnName="col16" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TargetTable1">
+      <EntityTypeMapping TypeName="TestModel.TargetTable1">
+        <MappingFragment StoreEntitySet="TargetTable1">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="col1" ColumnName="col1" />
+          <ScalarProperty Name="col2" ColumnName="col2" />
+          <ScalarProperty Name="col3" ColumnName="col3" />
+          <ScalarProperty Name="col4" ColumnName="col4" />
+          <ScalarProperty Name="col5" ColumnName="col5" />
+          <ScalarProperty Name="col6" ColumnName="col6" />
+          <ScalarProperty Name="col7" ColumnName="col7" />
+          <ScalarProperty Name="col8" ColumnName="col8" />
+          <ScalarProperty Name="col9" ColumnName="col9" />
+          <ScalarProperty Name="col10" ColumnName="col10" />
+          <ScalarProperty Name="col11" ColumnName="col11" />
+          <ScalarProperty Name="col12" ColumnName="col12" />
+          <ScalarProperty Name="col13" ColumnName="col13" />
+          <ScalarProperty Name="col14" ColumnName="col14" />
+          <ScalarProperty Name="col15" ColumnName="col15" />
+          <ScalarProperty Name="col16" ColumnName="col16" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

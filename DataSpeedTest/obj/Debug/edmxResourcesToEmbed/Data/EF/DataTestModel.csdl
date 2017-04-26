@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="SourceTable1">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="col1" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="col2" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="col3" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="col4" Type="Double" />
+    <Property Name="col5" Type="Double" />
+    <Property Name="col6" Type="Double" />
+    <Property Name="col7" Type="Double" Nullable="false" />
+    <Property Name="col8" Type="Double" />
+    <Property Name="col9" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="col10" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="col11" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="col12" Type="Int64" />
+    <Property Name="col13" Type="Int64" />
+    <Property Name="col14" Type="Boolean" />
+    <Property Name="col15" Type="Boolean" />
+    <Property Name="col16" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TargetTable1">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="col1" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="col2" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="col3" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="col4" Type="Double" />
+    <Property Name="col5" Type="Double" />
+    <Property Name="col6" Type="Double" />
+    <Property Name="col7" Type="Double" Nullable="false" />
+    <Property Name="col8" Type="Double" />
+    <Property Name="col9" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="col10" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="col11" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="col12" Type="Int64" />
+    <Property Name="col13" Type="Int64" />
+    <Property Name="col14" Type="Boolean" />
+    <Property Name="col15" Type="Boolean" />
+    <Property Name="col16" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="TestEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SourceTable1" EntityType="Self.SourceTable1" />
+    <EntitySet Name="TargetTable1" EntityType="Self.TargetTable1" />
+  </EntityContainer>
+</Schema>
