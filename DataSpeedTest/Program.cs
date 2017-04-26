@@ -12,8 +12,38 @@ namespace DataSpeedTest
     {
         static void Main(string[] args)
         {
-            var records = DataHelper.LoadDataToDatatable();
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+            var elapsedMs = watch.ElapsedMilliseconds;
+            var recordsList = DataHelper.ParseList(DataHelper.LoadDataToList());
+            var recordsDb  = DataHelper.LoadDataToDatatable();
 
+            //list EF Ranch
+            DataHelper.CleanTargetTable();
+            watch = System.Diagnostics.Stopwatch.StartNew();
+            InsertHelper_EF.InsertFromListByRange(recordsList);
+            elapsedMs = watch.ElapsedMilliseconds;
+            Console.WriteLine("List - EF - Range Insert :" + elapsedMs + " ms");
+            //list EF Buck
+            DataHelper.CleanTargetTable();
+            watch = System.Diagnostics.Stopwatch.StartNew();
+            InsertHelper_EF.InsertFromListByEFUtiInserAll(recordsList);
+            elapsedMs = watch.ElapsedMilliseconds;
+            Console.WriteLine("List - EF - Bulk Insert :" + elapsedMs + " ms");
+            //list EF Buck extension
+            DataHelper.CleanTargetTable();
+            watch = System.Diagnostics.Stopwatch.StartNew();
+            InsertHelper_EF.InsertFromListByExtension(recordsList);
+            elapsedMs = watch.ElapsedMilliseconds;
+            Console.WriteLine("List - EF - Extension Insert :" + elapsedMs + " ms");
+            //list EF Buck extension size 100
+            DataHelper.CleanTargetTable();
+            watch = System.Diagnostics.Stopwatch.StartNew();
+            InsertHelper_EF.InsertFromListByExtension(recordsList, 100);
+            elapsedMs = watch.ElapsedMilliseconds;
+            Console.WriteLine("List - EF - Extension Size 100 Insert :" + elapsedMs + " ms");
+ 
+
+            Console.ReadLine();
         }
     }
 }

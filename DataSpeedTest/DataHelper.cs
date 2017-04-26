@@ -8,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Reflection;
 using System.ComponentModel;
+using Newtonsoft.Json;
 
 namespace DataSpeedTest
 {
@@ -31,8 +32,7 @@ namespace DataSpeedTest
 
         public static DataTable ToDataTable<T>(this IList<T> data)
         {
-            PropertyDescriptorCollection properties =
-                TypeDescriptor.GetProperties(typeof(T));
+            PropertyDescriptorCollection properties = TypeDescriptor.GetProperties(typeof(T));
             DataTable table = new DataTable();
             foreach (PropertyDescriptor prop in properties)
                 table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType);
@@ -44,6 +44,20 @@ namespace DataSpeedTest
                 table.Rows.Add(row);
             }
             return table;
+        }
+
+        public static void CleanTargetTable()
+        {
+            using (var context = new TestEntities())
+            {
+                context.Database.ExecuteSqlCommand("TRUNCATE TABLE [Test].[dbo].[TargetTable1]");
+            }
+        }
+
+        public static List<TargetTable1> ParseList(List<SourceTable1> list)
+        {
+            var json = JsonConvert.SerializeObject(list);
+            return JsonConvert.DeserializeObject<List<TargetTable1>>(json);
         }
 
 

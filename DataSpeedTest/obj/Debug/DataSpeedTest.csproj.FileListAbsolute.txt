@@ -8,3 +8,10 @@ c:\users\luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\
 c:\users\luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\bin\Debug\EntityFramework.SqlServer.dll
 c:\users\luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\bin\Debug\EntityFramework.xml
 c:\users\luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\bin\Debug\Newtonsoft.Json.dll
+c:\users\luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\bin\Debug\EntityFramework.SqlServerCompact.dll
+C:\Users\Luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\bin\Debug\EntityFramework.Utilities.dll
+C:\Users\Luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\Luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\Luke\documents\visual studio 2017\Projects\DataSpeedTest\DataSpeedTest\bin\Debug\Z.EntityFramework.Extensions.dll
