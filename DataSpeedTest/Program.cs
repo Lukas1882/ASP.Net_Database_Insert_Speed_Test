@@ -29,19 +29,12 @@ namespace DataSpeedTest
             InsertHelper_EF.InsertFromListByEFUtiInserAll(recordsList);
             elapsedMs = watch.ElapsedMilliseconds;
             Console.WriteLine("List - EF - Bulk Insert :" + elapsedMs + " ms");
-            //list EF Buck extension
-            DataHelper.CleanTargetTable();
-            watch = System.Diagnostics.Stopwatch.StartNew();
-            InsertHelper_EF.InsertFromListByExtension(recordsList);
-            elapsedMs = watch.ElapsedMilliseconds;
-            Console.WriteLine("List - EF - Extension Insert :" + elapsedMs + " ms");
-            //list EF Buck extension size 100
-            DataHelper.CleanTargetTable();
-            watch = System.Diagnostics.Stopwatch.StartNew();
-            InsertHelper_EF.InsertFromListByExtension(recordsList, 100);
-            elapsedMs = watch.ElapsedMilliseconds;
-            Console.WriteLine("List - EF - Extension Size 100 Insert :" + elapsedMs + " ms");
- 
+            ////list EF Buck extension
+            //DataHelper.CleanTargetTable();
+            //watch = System.Diagnostics.Stopwatch.StartNew();
+            //InsertHelper_EF.InsertFromListByExtension(recordsList);
+            //elapsedMs = watch.ElapsedMilliseconds;
+            //Console.WriteLine("List - EF - Extension Insert :" + elapsedMs + " ms");
 
             Console.ReadLine();
         }
