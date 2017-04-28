@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using DataSpeedTest.Data.EF;
 using EntityFramework.Utilities;
-
+using System.Linq;
+using System.Configuration;
 
 namespace DataSpeedTest
 {
@@ -29,17 +30,23 @@ namespace DataSpeedTest
             }
         }
 
-        public static void InsertFromListByExtension(List<TargetTable1> list, int bulkSize = 0)
+        public static void InsertFromListByLinq(List<TargetTable1> list)
         {
-            using (var db = new TestEntities())
-            {
-                db.TargetTable1.AddRange(list); // add
-                if (bulkSize == 0)
-                    db.BulkSaveChanges();
-                else
-                    db.BulkSaveChanges(bulk => bulk.BatchSize = bulkSize);
-            }
+            string connectString = System.Configuration.configurationm .ConfigurationManager.ConnectionStrings["LinqToSQLDBConnectionString"].ToString();
+            LinqToSQLDataContext db = new LinqToSQLDataContext(connectString);
         }
+
+        //public static void InsertFromListByExtension(List<TargetTable1> list, int bulkSize = 0)
+        //{
+        //    using (var db = new TestEntities())
+        //    {
+        //        db.TargetTable1.AddRange(list); // add
+        //        if (bulkSize == 0)
+        //            db.BulkSaveChanges();
+        //        else
+        //            db.BulkSaveChanges(bulk => bulk.BatchSize = bulkSize);
+        //    }
+        //}
 
     }
 }
