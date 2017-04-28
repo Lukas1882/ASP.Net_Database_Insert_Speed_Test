@@ -30,23 +30,7 @@ namespace DataSpeedTest
             }
         }
 
-        public static void InsertFromListByLinq(List<TargetTable1> list)
-        {
-            string connectString = System.Configuration.configurationm .ConfigurationManager.ConnectionStrings["LinqToSQLDBConnectionString"].ToString();
-            LinqToSQLDataContext db = new LinqToSQLDataContext(connectString);
-        }
 
-        //public static void InsertFromListByExtension(List<TargetTable1> list, int bulkSize = 0)
-        //{
-        //    using (var db = new TestEntities())
-        //    {
-        //        db.TargetTable1.AddRange(list); // add
-        //        if (bulkSize == 0)
-        //            db.BulkSaveChanges();
-        //        else
-        //            db.BulkSaveChanges(bulk => bulk.BatchSize = bulkSize);
-        //    }
-        //}
 
     }
 }
