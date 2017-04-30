@@ -1,7 +1,7 @@
 # ASP.Net_Database_Insert_Speed_Test
 using differnt scenarios to test the performance when insert big record number
 
-In this project, we are using 3 approaches to test the bulk insert using Entity Framework. For the details, please check my blog **==“Speed Test for Entity Framework (EF) Bulk Insert ( EF-AddRabge VS EF-Utility VS EF-Extension)”==** at [https://www.starwar.io](https://www.starwar.io/blog/2017/04/30/speed-test-for-entity-framework-ef-bulk-insert-ef-addrabge-vs-ef-utility-vs-ef-extension/).
+In this project, we are using 3 approaches to test the bulk insert using Entity Framework. For the details, please check my blog **“Speed Test for Entity Framework (EF) Bulk Insert ( EF-AddRabge VS EF-Utility VS EF-Extension)”** at [https://www.starwar.io](https://www.starwar.io/blog/2017/04/30/speed-test-for-entity-framework-ef-bulk-insert-ef-addrabge-vs-ef-utility-vs-ef-extension/).
 
 ## Test Tools
 **==EF AddRange()==**: https://msdn.microsoft.com/en-us/library/system.data.entity.dbset.addrange(v=vs.113).aspx
